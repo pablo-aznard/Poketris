@@ -103,36 +103,5 @@ class BoardView: UIView {
         return CGFloat(box) * boxSize
     }
 
-    /******************************************************************************/
-    /* TRATAMIENTO DE GESTOS                                                      */
-    /******************************************************************************/
-    /*override func awakeFromNib() {
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(BoardView.swipe(_:)))
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(BoardView.swipe(_:)))
-        let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(BoardView.swipe(_:)))
-        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(BoardView.swipe(_:)))
-        leftSwipe.direction = UISwipeGestureRecognizerDirection.left
-        upSwipe.direction = UISwipeGestureRecognizerDirection.up
-        downSwipe.direction = UISwipeGestureRecognizerDirection.down
-        addGestureRecognizer(rightSwipe); addGestureRecognizer(leftSwipe)
-        addGestureRecognizer(upSwipe);    addGestureRecognizer(downSwipe)
-    }
-    
-    func swipe (_ sender: UISwipeGestureRecognizer) {
-        let dir = sender.direction.rawValue
-        switch dir {
-        case 1: // right
-            board.moveRight()
-        case 2: // left
-            board.moveLeft()
-        case 4: // up
-            board.rotate(toRight: true)
-        case 8: // down
-            board.moveDown(insertNewBlockIfNeeded: true)
-        default:
-            print("Not a real print")
-        }
-        setNeedsDisplay()
-    }*/
-  
+
 }

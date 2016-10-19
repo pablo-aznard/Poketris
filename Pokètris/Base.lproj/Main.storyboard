@@ -71,6 +71,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tetris" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4f-cU-rTz">
                                 <rect key="frame" x="129.5" y="28" width="61" height="30"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="61" id="VrQ-aL-ssG"/>
                                 </constraints>
@@ -83,8 +84,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="InA-bL-1d7" appends="YES" id="AOy-9B-4a4"/>
-                                    <outletCollection property="gestureRecognizers" destination="InA-bL-1d7" appends="YES" id="D8W-BC-Tue"/>
+                                    <outletCollection property="gestureRecognizers" destination="InA-bL-1d7" appends="YES" id="Xza-pd-C9U"/>
+                                    <outletCollection property="gestureRecognizers" destination="pm1-SM-SYz" appends="YES" id="mp7-ch-PgJ"/>
+                                    <outletCollection property="gestureRecognizers" destination="XxB-ci-6e9" appends="YES" id="HPq-9X-uOC"/>
+                                    <outletCollection property="gestureRecognizers" destination="aNz-zZ-MpQ" appends="YES" id="SF4-b1-VfO"/>
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylX-VL-vHR">
@@ -148,10 +151,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="xgt-vH-7Ll" secondAttribute="trailing" constant="25" id="tsB-VF-cAb"/>
                             <constraint firstItem="BpP-hs-aa8" firstAttribute="baseline" secondItem="1GW-C0-Wpo" secondAttribute="baseline" id="vZC-2F-xOO"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="InA-bL-1d7" appends="YES" id="KRx-CX-Cnj"/>
-                            <outletCollection property="gestureRecognizers" destination="InA-bL-1d7" appends="YES" id="yjs-eH-djq"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="blockView" destination="FrO-Tv-iRq" id="8tn-EJ-t32"/>
@@ -162,6 +161,24 @@
                 <swipeGestureRecognizer direction="left" id="InA-bL-1d7">
                     <connections>
                         <action selector="leftSwipe:" destination="BYZ-38-t0r" id="QJb-y7-dNP"/>
+                        <outlet property="delegate" destination="BR4-so-SGd" id="j8j-OA-7O1"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="pm1-SM-SYz">
+                    <connections>
+                        <action selector="rightSwipe:" destination="BYZ-38-t0r" id="uQj-xT-PI7"/>
+                        <outlet property="delegate" destination="BR4-so-SGd" id="s98-am-0fG"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="XxB-ci-6e9">
+                    <connections>
+                        <action selector="downSwipe:" destination="BYZ-38-t0r" id="Utl-6w-2Fc"/>
+                        <outlet property="delegate" destination="BR4-so-SGd" id="mEV-I0-uiV"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="aNz-zZ-MpQ">
+                    <connections>
+                        <action selector="upSwipe:" destination="BYZ-38-t0r" id="uE7-tZ-Hc2"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
