@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11535.1" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11523"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Poke_tris" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpP-hs-aa8">
+                                <rect key="frame" x="16" y="497" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="gDd-5v-N25"/>
+                                </constraints>
+                                <state key="normal" title="&lt;-">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="so4-Gp-r7N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GW-C0-Wpo">
+                                <rect key="frame" x="96" y="497" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="pgx-69-vS7"/>
+                                </constraints>
+                                <state key="normal" title="V">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tBG-Q9-7UB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bd5-Ts-L4A">
+                                <rect key="frame" x="258" y="497" width="46" height="30"/>
+                                <state key="normal" title="-&gt;">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tRl-Px-Gh5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UL4-vV-oMp">
+                                <rect key="frame" x="179" y="497" width="45" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="ftD-Aw-QhS"/>
+                                </constraints>
+                                <state key="normal" title="Rotate">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="rotate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sOS-Wv-sl7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tetris" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4f-cU-rTz">
+                                <rect key="frame" x="129.5" y="28" width="61" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="VrQ-aL-ssG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="BR4-so-SGd" customClass="BoardView" customModule="Poke_tris" customModuleProvider="target">
+                                <rect key="frame" x="40" y="114" width="240" height="340"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="InA-bL-1d7" appends="YES" id="AOy-9B-4a4"/>
+                                    <outletCollection property="gestureRecognizers" destination="InA-bL-1d7" appends="YES" id="D8W-BC-Tue"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylX-VL-vHR">
+                                <rect key="frame" x="139" y="66" width="42" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="210-L1-013"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partidas: 999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahp-bm-Pak">
+                                <rect key="frame" x="40" y="72" width="106" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record: 999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgt-vH-7Ll">
+                                <rect key="frame" x="179" y="72" width="100" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="FrO-Tv-iRq" customClass="BoardView" customModule="Poke_tris" customModuleProvider="target">
+                                <rect key="frame" x="225.5" y="28" width="54.5" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.98973233486001266" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BpP-hs-aa8" secondAttribute="bottom" constant="41" id="0BV-N9-YZX"/>
+                            <constraint firstItem="FrO-Tv-iRq" firstAttribute="trailing" secondItem="BR4-so-SGd" secondAttribute="trailing" id="1OE-ow-4xz"/>
+                            <constraint firstItem="FrO-Tv-iRq" firstAttribute="leading" secondItem="u4f-cU-rTz" secondAttribute="trailing" constant="35" id="2MI-ln-EgM"/>
+                            <constraint firstItem="BpP-hs-aa8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3rs-bY-dAM"/>
+                            <constraint firstItem="Ahp-bm-Pak" firstAttribute="baseline" secondItem="xgt-vH-7Ll" secondAttribute="baseline" id="4SH-qn-1FZ"/>
+                            <constraint firstItem="ylX-VL-vHR" firstAttribute="centerX" secondItem="BR4-so-SGd" secondAttribute="centerX" id="6i7-9r-De8"/>
+                            <constraint firstItem="bd5-Ts-L4A" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="72g-dy-6LS"/>
+                            <constraint firstItem="u4f-cU-rTz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="BAE-Yz-9Y1"/>
+                            <constraint firstItem="Ahp-bm-Pak" firstAttribute="leading" secondItem="BR4-so-SGd" secondAttribute="leading" id="BYv-NQ-3WI"/>
+                            <constraint firstItem="1GW-C0-Wpo" firstAttribute="baseline" secondItem="UL4-vV-oMp" secondAttribute="baseline" id="Bh8-3N-aH0"/>
+                            <constraint firstItem="Ahp-bm-Pak" firstAttribute="baseline" secondItem="xgt-vH-7Ll" secondAttribute="firstBaseline" id="Dg3-7Y-fYM"/>
+                            <constraint firstItem="BR4-so-SGd" firstAttribute="top" secondItem="ylX-VL-vHR" secondAttribute="bottom" constant="19" id="Fhd-dq-IjP"/>
+                            <constraint firstItem="u4f-cU-rTz" firstAttribute="centerX" secondItem="ylX-VL-vHR" secondAttribute="centerX" id="H6z-Em-fkZ"/>
+                            <constraint firstItem="ylX-VL-vHR" firstAttribute="centerY" secondItem="xgt-vH-7Ll" secondAttribute="centerY" id="HXx-MS-frj"/>
+                            <constraint firstItem="BpP-hs-aa8" firstAttribute="top" secondItem="BR4-so-SGd" secondAttribute="bottom" constant="43" id="M99-LN-aGQ"/>
+                            <constraint firstItem="Ahp-bm-Pak" firstAttribute="top" secondItem="u4f-cU-rTz" secondAttribute="bottom" constant="14" id="MMS-Ml-q30"/>
+                            <constraint firstItem="u4f-cU-rTz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TWc-d3-UKJ"/>
+                            <constraint firstItem="xgt-vH-7Ll" firstAttribute="leading" secondItem="Ahp-bm-Pak" secondAttribute="trailing" constant="33" id="UWf-eD-yXD"/>
+                            <constraint firstItem="Ahp-bm-Pak" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="aGO-fS-aBJ"/>
+                            <constraint firstItem="xgt-vH-7Ll" firstAttribute="baseline" secondItem="Ahp-bm-Pak" secondAttribute="firstBaseline" id="aLg-Sb-IBv"/>
+                            <constraint firstItem="UL4-vV-oMp" firstAttribute="baseline" secondItem="bd5-Ts-L4A" secondAttribute="baseline" id="abb-HG-0dw"/>
+                            <constraint firstItem="FrO-Tv-iRq" firstAttribute="top" secondItem="u4f-cU-rTz" secondAttribute="top" id="c42-A9-aYM"/>
+                            <constraint firstItem="ylX-VL-vHR" firstAttribute="top" secondItem="u4f-cU-rTz" secondAttribute="bottom" constant="8" symbolic="YES" id="cn6-gg-hYr"/>
+                            <constraint firstItem="BR4-so-SGd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="czP-zm-cuT"/>
+                            <constraint firstItem="UL4-vV-oMp" firstAttribute="leading" secondItem="1GW-C0-Wpo" secondAttribute="trailing" constant="53" id="dYp-8W-WZf"/>
+                            <constraint firstItem="xgt-vH-7Ll" firstAttribute="leading" secondItem="UL4-vV-oMp" secondAttribute="leading" id="fDo-Xz-auB"/>
+                            <constraint firstItem="bd5-Ts-L4A" firstAttribute="leading" secondItem="UL4-vV-oMp" secondAttribute="trailing" constant="34" id="kia-vQ-8h9"/>
+                            <constraint firstItem="1GW-C0-Wpo" firstAttribute="leading" secondItem="BpP-hs-aa8" secondAttribute="trailing" constant="34" id="kww-SS-grO"/>
+                            <constraint firstItem="xgt-vH-7Ll" firstAttribute="top" secondItem="FrO-Tv-iRq" secondAttribute="bottom" constant="8" symbolic="YES" id="nfF-OL-W0v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xgt-vH-7Ll" secondAttribute="trailing" constant="25" id="tsB-VF-cAb"/>
+                            <constraint firstItem="BpP-hs-aa8" firstAttribute="baseline" secondItem="1GW-C0-Wpo" secondAttribute="baseline" id="vZC-2F-xOO"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="InA-bL-1d7" appends="YES" id="KRx-CX-Cnj"/>
+                            <outletCollection property="gestureRecognizers" destination="InA-bL-1d7" appends="YES" id="yjs-eH-djq"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="blockView" destination="FrO-Tv-iRq" id="8tn-EJ-t32"/>
+                        <outlet property="boardView" destination="BR4-so-SGd" id="9Ec-DX-6p4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="InA-bL-1d7">
+                    <connections>
+                        <action selector="leftSwipe:" destination="BYZ-38-t0r" id="QJb-y7-dNP"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="114.375" y="122.53521126760563"/>
+        </scene>
+    </scenes>
+</document>
