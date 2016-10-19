@@ -119,6 +119,7 @@ class ViewController: UIViewController, BoardViewDataSource {
     func autoMoveDown(){
         board.moveDown(insertNewBlockIfNeeded: true)
         boardView.setNeedsDisplay()
+        blockView.setNeedsDisplay()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(autoMoveDown), userInfo: nil, repeats: false)
     }
 
@@ -150,8 +151,24 @@ class ViewController: UIViewController, BoardViewDataSource {
     
     @IBAction func leftSwipe(_ sender: UISwipeGestureRecognizer) {
         board.moveLeft()
-        
         boardView.setNeedsDisplay()
     }
+    
+    @IBAction func rightSwipe(_ sender: UISwipeGestureRecognizer) {
+        board.moveRight()
+        boardView.setNeedsDisplay()
+    }
+    
+    @IBAction func downSwipe(_ sender: UISwipeGestureRecognizer) {
+        board.dropDown()
+        boardView.setNeedsDisplay()
+    }
+    
+    @IBAction func upSwipe(_ sender: UISwipeGestureRecognizer) {
+        board.rotate(toRight: true)
+        boardView.setNeedsDisplay()
+    }
+    
+    
     
 }
