@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6EE3FA1D1DB5447800502247 /* imagenes in Resources */ = {isa = PBXBuildFile; fileRef = 6EE3FA1C1DB5447800502247 /* imagenes */; };
+		6E0849861DB8004B00C7DC6D /* ic_arrow_forward_white_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E0849851DB8004B00C7DC6D /* ic_arrow_forward_white_48pt.png */; };
 		DA0A034B1D9FDB7300B96790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A034A1D9FDB7300B96790 /* AppDelegate.swift */; };
 		DA0A034D1D9FDB7300B96790 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A034C1D9FDB7300B96790 /* ViewController.swift */; };
 		DA0A03501D9FDB7300B96790 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0A034E1D9FDB7300B96790 /* Main.storyboard */; };
@@ -31,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6EE3FA1C1DB5447800502247 /* imagenes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = imagenes; sourceTree = "<group>"; };
+		6E0849851DB8004B00C7DC6D /* ic_arrow_forward_white_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_arrow_forward_white_48pt.png; sourceTree = "<group>"; };
 		DA0A03471D9FDB7300B96790 /* Pokètris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pokètris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0A034A1D9FDB7300B96790 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA0A034C1D9FDB7300B96790 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 				DA0A036E1D9FDC0B00B96790 /* Texture.swift */,
 				DA0A034E1D9FDB7300B96790 /* Main.storyboard */,
 				DA0A03511D9FDB7300B96790 /* Assets.xcassets */,
-				6EE3FA1C1DB5447800502247 /* imagenes */,
+				6E0849851DB8004B00C7DC6D /* ic_arrow_forward_white_48pt.png */,
 				DA0A03531D9FDB7300B96790 /* LaunchScreen.storyboard */,
 				DA0A03561D9FDB7300B96790 /* Info.plist */,
 			);
@@ -196,9 +196,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA0A03551D9FDB7300B96790 /* LaunchScreen.storyboard in Resources */,
-				6EE3FA1D1DB5447800502247 /* imagenes in Resources */,
 				DA0A03521D9FDB7300B96790 /* Assets.xcassets in Resources */,
 				DA0A03501D9FDB7300B96790 /* Main.storyboard in Resources */,
+				6E0849861DB8004B00C7DC6D /* ic_arrow_forward_white_48pt.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

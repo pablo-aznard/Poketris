@@ -40,10 +40,10 @@ class BoardView: UIView {
         
         let rows = dataSource.numberOfRows(in: self)
         let columns = dataSource.numberOfColumns(in: self)
-        let canvasX = box2Point(0)
-        let canvasY = box2Point(0)
         let canvasWidth = box2Point(columns)
         let canvasHeight = box2Point(rows)
+        let canvasX = (bounds.width - canvasWidth)/2
+        let canvasY = box2Point(0)
         
         let rect = CGRect(x: canvasX, y: canvasY, width: canvasWidth, height: canvasHeight)
         let path = UIBezierPath(rect: rect)
@@ -67,11 +67,14 @@ class BoardView: UIView {
     
     private func drawBox(row: Int, column: Int){
         
+        let columns = dataSource.numberOfColumns(in: self)
+        let width = CGFloat(columns) * box2Point(1)
+        let realBounds = (bounds.width - width)/2
         
         if let bgImg = dataSource.backgroundImageName(in: self, atRow: row, atColumn: column),
             let fgImg = dataSource.foregroundImageName(in: self, atRow: row, atColumn: column){
             
-            let x = box2Point(column)
+            let x = realBounds + box2Point(column)
             let y = box2Point(row)
             let width = box2Point(1)
             let height = box2Point(1)
@@ -103,5 +106,5 @@ class BoardView: UIView {
         return CGFloat(box) * boxSize
     }
 
-
+    
 }

@@ -142,6 +142,10 @@ class ViewController: UIViewController, BoardViewDataSource {
         boardView.setNeedsDisplay()
     }
     
+    @IBAction func rotateLeft(_ sender: UIButton) {
+        board.rotate(toRight: false)
+        boardView.setNeedsDisplay()
+    }
     @IBAction func moveDown(_ sender: UIButton) {
         board.dropDown()
         boardView.setNeedsDisplay()
